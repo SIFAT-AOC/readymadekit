@@ -139,6 +139,8 @@ add_action( 'widgets_init', 'readymade_widgets_init' );
  */
 function readymade_scripts() {
 	wp_enqueue_style( 'readymade-style', get_stylesheet_uri(), array(), _S_VERSION );
+	
+	wp_enqueue_style( 'readymade-main', get_template_directory_uri() . '/css/main.css');
 	wp_style_add_data( 'readymade-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'readymade-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
